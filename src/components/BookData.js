@@ -10,6 +10,7 @@ class Book extends Component {
             authors: this.props.authors,
             publisher: this.props.publisher,
             publishedDate: this.props.publishedDate,
+            pageCount: this.props.pageCount,
             averageRating: star.repeat(this.props.averageRating),
             ratingsCount: this.props.ratingsCount,
             imageLink: this.props.imageLink
@@ -29,6 +30,7 @@ class Book extends Component {
                     <div><b>Author: </b>{propsData.authors}</div>
                     <div><b>Publisher: </b>{propsData.publisher}</div>
                     <div><b>Published Date: </b>{propsData.publishedDate}</div>
+                    <div><b>Page Count: </b>{propsData.pageCount}</div>
                     <div><b>Average Rating: </b>{propsData.averageRating} </div>
                     <div><b>Rating Counts: </b>{propsData.ratingsCount}</div>
                     {/* <p>Description: {this.props.description}</p> */}
