@@ -37,6 +37,7 @@ class FetchData extends Component {
                                 description={book.description}
                                 averageRating={book.averageRating}
                                 ratingsCount={book.ratingsCount}
+                                pageCount={book.pageCount}
                                 imageLink={imageLink}
                             />
                             <hr />
