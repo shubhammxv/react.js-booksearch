@@ -1,0 +1,17 @@
+.BookData {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px;
+}
+
+.Book {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
