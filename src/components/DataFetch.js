@@ -34,7 +34,7 @@ class FetchData extends Component {
                                 authors={book.authors}
                                 publisher={book.publisher}
                                 publishedDate={book.publishedDate}
-                                description={book.description}
+                                pageCount={book.pageCount}
                                 averageRating={book.averageRating}
                                 ratingsCount={book.ratingsCount}
                                 imageLink={imageLink}
@@ -43,10 +43,16 @@ class FetchData extends Component {
                         </div>
                     )
                 })
-                this.setState({booksData: booksData})
+                this.setState({booksData: booksData, currentSearch: ''})
             }
             catch (err) {
-                alert('Product does not exist')
+                let booksData = (
+                    <div className="error">
+                        Book with ISBN No. <span style={{color: 'red'}}>{this.state.currentSearch.toUpperCase()}</span> was not found!
+                    </div>
+                )
+                this.setState({booksData: booksData, currentSearch: ''})
+              // alert('Product does not exist') 
             }
         })
     }
@@ -62,10 +68,10 @@ class FetchData extends Component {
     render() {
         return (
             <div>
-            <SearchBook clicked={this.searchClickHandler} changed={this.onChangeHandler} value={this.state.currentSearch}/>
-            <div className="bookData">
-                {this.state.booksData}
-            </div>
+                <SearchBook clicked={this.searchClickHandler} changed={this.onChangeHandler} value={this.state.currentSearch}/>
+                <div className="bookData">
+                    {this.state.booksData}
+                </div>
             </div>
         )
     }

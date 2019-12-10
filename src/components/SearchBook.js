@@ -5,7 +5,7 @@ class SearchBook extends Component {
 
     render() {
         return (
-            <div>
+            <div class="SearchBook">
                 <input
                   className="search-input"
                   type="text"
